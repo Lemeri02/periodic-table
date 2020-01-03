@@ -40,5 +40,19 @@
     "density": 2.08,
     "year": "3750 BCE",
     "discovered_by": "Ancient Egypt"
+  },
+  "N": {
+    "number": 7,
+    "name": "Nitrogen",
+    "density": 1.251,
+    "year": 1772,
+    "discovered_by": "Daniel Rutherford"
+  },
+  "O": {
+    "number": 8,
+    "name": "Oxygen",
+    "density": 1.429,
+    "year": 1771,
+    "discovered_by": "Carl Wilhelm Scheele"
   }
 }

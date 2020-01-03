@@ -5,18 +5,19 @@ require_relative 'lib/element'
 file = "#{__dir__}/data/elements.json"
 periodic_table = PeriodicTable.from_file(file)
 
-puts 'О каком элементе хотите узнать?'
-# periodic_table.each do |symbol, element|
-#   puts "#{symbol} #{element['name']} --"
-#   Element.new(element, symbol)
-# end
-puts periodic_table 
- 
+puts 'О каком элементе хотите узнать? (Введите символ элемента латинскими буквами):'
 
- 
-# puts periodic_table
+periodic_table.elements.each do |symbol, element|
+  puts "#{symbol} (#{element['name']})"
+end
 
-user_input = 'li' #STDIN.gets.chomp
+user_input = STDIN.gets.chomp
 
+selected_element = periodic_table.get_element(user_input)
 
-puts periodic_table.show(user_input)
+if selected_element
+  element = Element.new(selected_element)
+  puts element
+else
+  puts 'Элемент еще не добавлен в таблицу или не открыт!'
+end

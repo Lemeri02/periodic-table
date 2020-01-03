@@ -1,15 +1,16 @@
 class Element
-  def initialize(params)
-    @symbol = params.keys.join
-    @name = params[@symbol]['name']
-    @number = params[@symbol]['number']
-    @density = params[@symbol]['density']
-    @year = params[@symbol]['year']
-    @discovered_by = params[@symbol]['discovered_by']
+  def initialize(element)
+    @symbol = element.keys.join
+    @name = element[@symbol]['name']
+    @number = element[@symbol]['number']
+    @density = element[@symbol]['density']
+    @year = element[@symbol]['year']
+    @discovered_by = element[@symbol]['discovered_by']
   end
 
   def to_s
-    <<-ELEMENT
+    <<~ELEMENT
+
       Symbol: #{@symbol}
       Name: #{@name}
       Atomic number: #{@number}
