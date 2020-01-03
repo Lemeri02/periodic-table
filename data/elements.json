@@ -1,0 +1,44 @@
+{
+  "H": {
+    "number": 1,
+    "name": "Hydrogen",
+    "density": 0.08988,
+    "year": 1766,
+    "discovered_by": "Henry Cavendish"
+  },
+  "He": {
+    "number": 2,
+    "name": "Helium",
+    "density": 0.1786,
+    "year": 1868,
+    "discovered_by": "Pierre Janssen"
+  },
+  "Li": {
+    "number": 3,
+    "name": "Lithium",
+    "density": 0.534,
+    "year": 1817,
+    "discovered_by": "Johan August Arfwedson"
+  },
+  "Be": {
+    "number": 4,
+    "name": "Beryllium",
+    "density": 1.85,
+    "year": 1798,
+    "discovered_by": "Louis Nicolas Vauquelin"
+  },
+  "B": {
+    "number": 5,
+    "name": "Boron",
+    "density": 2.08,
+    "year": 1808,
+    "discovered_by": "Joseph Louis Gay-Lussac"
+  },
+  "C": {
+    "number": 6,
+    "name": "Carbon",
+    "density": 2.08,
+    "year": "3750 BCE",
+    "discovered_by": "Ancient Egypt"
+  }
+}
