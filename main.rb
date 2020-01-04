@@ -7,17 +7,16 @@ periodic_table = PeriodicTable.from_file(file)
 
 puts 'О каком элементе хотите узнать? (Введите символ элемента латинскими буквами):'
 
-periodic_table.elements.each do |symbol, element|
-  puts "#{symbol} (#{element['name']})"
+periodic_table.elements.each do |element|
+  puts element.list
 end
 
 user_input = STDIN.gets.chomp
 
 selected_element = periodic_table.get_element(user_input)
 
-if selected_element
-  element = Element.new(selected_element)
-  puts element
-else
+if selected_element.empty?
   puts 'Элемент еще не добавлен в таблицу или не открыт!'
+else
+  puts selected_element
 end

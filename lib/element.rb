@@ -1,11 +1,17 @@
 class Element
+  attr_reader :symbol, :name, :number, :density, :year, :discovered_by
+
   def initialize(element)
-    @symbol = element.keys.join
-    @name = element[@symbol]['name']
-    @number = element[@symbol]['number']
-    @density = element[@symbol]['density']
-    @year = element[@symbol]['year']
-    @discovered_by = element[@symbol]['discovered_by']
+    @symbol = element[0]
+    @name = element[1]['name']
+    @number = element[1]['number']
+    @density = element[1]['density']
+    @year = element[1]['year']
+    @discovered_by = element[1]['discovered_by']
+  end
+
+  def list
+    "#{@symbol} (#{name})"
   end
 
   def to_s
