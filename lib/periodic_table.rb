@@ -2,7 +2,7 @@ class PeriodicTable
   attr_reader :elements
 
   def self.from_file(file)
-    elements_hash = JSON.parse File.read(file, encoding: 'UTF-8')
+    elements_hash = JSON.parse(File.read(file, encoding: 'UTF-8'))
 
     new(elements_hash.map { |element| Element.new(element) })
   end
@@ -12,6 +12,6 @@ class PeriodicTable
   end
 
   def get_element(input)
-    @elements.select { |element| element.symbol.downcase == input.downcase }
+    @elements.find { |element| element.symbol.downcase == input.downcase }
   end
 end

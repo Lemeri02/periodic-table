@@ -3,15 +3,16 @@ class Element
 
   def initialize(element)
     @symbol = element[0]
-    @name = element[1]['name']
-    @number = element[1]['number']
-    @density = element[1]['density']
-    @year = element[1]['year']
-    @discovered_by = element[1]['discovered_by']
+    @props = element[1]
+    @name = @props['name']
+    @number = @props['number']
+    @density = @props['density']
+    @year = @props['year']
+    @discovered_by = @props['discovered_by']
   end
 
   def list
-    "#{@symbol} (#{name})"
+    "#{@symbol} (#{@name})"
   end
 
   def to_s
